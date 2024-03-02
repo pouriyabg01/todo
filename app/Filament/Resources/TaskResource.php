@@ -93,6 +93,10 @@ class TaskResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\ToggleColumn::make('completed'),
+                Tables\Columns\TextColumn::make('tags.title')
+                    ->badge()
+                    ->color('primary')
+                    ->limitList(3),
                 Tables\Columns\TextColumn::make('repeat'),
                 Tables\Columns\TextColumn::make('priority')
                     ->state(function ($record){

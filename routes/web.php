@@ -24,6 +24,4 @@ Route::get('/', function () {
 
     dd($user->tasks()->where('tasks.id' , $task->id)->exists());
 });
-Route::post('telegram' , [TelBotController::class , 'index']);
-Route::post('set' , [TelBotController::class , 'set']);
 
