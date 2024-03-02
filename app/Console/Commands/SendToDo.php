@@ -34,7 +34,7 @@ class SendToDo extends Command
 
 //        if ($now->lt(Carbon::parse($task->reminder))) {
         if (true) {
-            Telegram::sendMessage([
+            Telegra::sendMessage([
                 'chat_id' => '5381913319',
                 'text' => 'its reminder for '.$task->title.'To-Do'
             ]);
